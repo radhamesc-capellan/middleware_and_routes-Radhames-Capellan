@@ -7,7 +7,9 @@ router.get("/users", (req, res) => {
 });
 
 router.post("/users", (req, res) => {
-  res.send("esto es un POST a users desde mi servidor");
+    const body = req.body;
+    console.log(req.body);
+  res.json(body);
 });
 
 module.exports = router;
